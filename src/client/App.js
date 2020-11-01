@@ -6,7 +6,7 @@ const App = () => {
   const [username, setUsername] = useState(undefined);
 
   useEffect(() => {
-    fetch('/api/getUsername')
+    fetch('/api/getUsername?username=Pepe')
       .then(res => res.json())
       .then(user => setUsername(user.username));
   });
